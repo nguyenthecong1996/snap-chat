@@ -1,0 +1,30 @@
+.ChatMessage {
+    display: flex;
+    align-items: center;
+    padding-left: 6px;
+    padding-right: 6px;    
+    height: 35px;    
+}
+
+.ower {
+    display: flex;
+    justify-content: flex-end;
+} 
+.ower > p {
+    background-color: #7095f6 !important;
+}
+.ChatMessage__image {
+    height: 30px !important;
+    width: 30px !important;
+}
+
+.ChatMessage > p {
+    border: 1px solid #cdc5c5;
+    background: #cdc5c5; 
+    padding-left: 5px;
+    border-radius: 4px;    
+}
+
+.ChatMessage__space {
+    padding: 2px;
+}

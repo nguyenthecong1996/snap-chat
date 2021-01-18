@@ -3,11 +3,25 @@ import ReactDOM from 'react-dom';
 import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
+import { createStore, combineReducers} from "redux";
+import { Provider } from "react-redux";
+import { cameraSlice } from "./reducer/cameraSlice";
+import { appSlice } from "./reducer/appSlice";
+import { chatSlice } from "./reducer/chatSlice";
 
+
+let store = createStore(combineReducers ({
+  cameraSlice,
+  appSlice,
+  chatSlice
+}));
 ReactDOM.render(
-  <React.StrictMode>
-    <App />
-  </React.StrictMode>,
+  <Provider store={store}>
+    <React.StrictMode>
+      <App />
+    </React.StrictMode>
+  </Provider>,
+
   document.getElementById('root')
 );
 
